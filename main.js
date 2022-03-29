@@ -11,8 +11,9 @@ function changeColor() {
 
 function validateInput() {
   const input = document.querySelector("#number-input");
+  const inputValue = Number(input.value);
   const formMessage = document.querySelector("#formFeedback");
-  if (input < 10) {
+  if (inputValue < 10) {
     formMessage.innerHTML("You are good to go!")
   } else {
     formMessage.innerHTML("Please enter a smaller number.")
@@ -20,4 +21,4 @@ function validateInput() {
 }
 
 document.querySelector(".color-changer").addEventListener("click", changeColor);
-document.querySelector(".number-input").addEventListener("click", validateInput);
+document.querySelector(".number-form").addEventListener("submit", validateInput);
